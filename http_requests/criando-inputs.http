@@ -1,0 +1,23 @@
+## Formas de usar os exemplos deste script:
+## - Um REST client como o Postman, Insomniac ou semelhantes.
+## - Executar o CURL no terminal
+## - Instalar esta extensão no VSCODE:
+##
+## Name: REST Client
+## @id:humao.rest-client
+## Description: REST Client for Visual Studio Code
+
+## Variáveis de ambiente
+@PIPEFY_TOKEN='seu_token_aqui'
+@PHASE_ID='ID_da_phase_aqui'
+
+curl --request POST \
+        --url https://api.pipefy.com/graphql \
+        --header 'Accept: application/json' \
+        --header 'Authorization: Bearer {{ PIPEFY_TOKEN }}' \
+        --header 'Content-Type: application/json' \
+        --data '
+{
+        "query": "mutation {   createPhaseField(     input:{         phase_id: {{ PHASE_ID }}         label: \"valor_do_desconto\"         description: \"Valor do desconto\"         type: \"currency\"     }) {     phase_field {       id     }   } }"
+}
+'
