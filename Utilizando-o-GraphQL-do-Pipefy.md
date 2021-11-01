@@ -1,7 +1,14 @@
 
+## Testando as queries
+
+Teste os códigos em https://app.pipefy.com/graphiql
+
+----
+
+
 1. - Pegar os campos que precisa E o ID da fase (Phase)
 
-No Pipe do quer copiar os campos
+No Pipe do qual quer copiar os campos, execute:
 
 ## code_01_01
 
