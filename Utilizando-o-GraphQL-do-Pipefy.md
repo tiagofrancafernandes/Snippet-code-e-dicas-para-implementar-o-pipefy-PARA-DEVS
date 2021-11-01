@@ -18,6 +18,8 @@ No Pipe do quer copiar os campos
           label
           required
           type
+          is_multiple
+          options
         }
   }
 }
